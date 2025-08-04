@@ -16,7 +16,7 @@ docker run --rm -it \
   --gpus device=0 \
  -v <path to output-dir>:/inference
   -v <path to the dir of trt_engine>:/models \
-  appsprodacr.azurecr.io/trt-llm-whisper:latest
+  appsprodacr.azurecr.io/trtllm_canary:latest
 ```
 
 ### 2. Running inference
