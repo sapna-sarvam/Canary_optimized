@@ -909,7 +909,7 @@ def decode_manifest(manifest_file,
         predictions = model.process_batch(waveforms,
                                           durations,
                                           num_beams=num_beams,
-                                          max_new_tokens=196,
+                                          max_new_tokens=max_new_tokens,
                                           prompts_cfg=prompt_cfg)
         
         for wav_id, label, prediction, cfg in zip(ids, texts, predictions,
