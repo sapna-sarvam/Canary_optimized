@@ -1126,7 +1126,7 @@ if __name__ == '__main__':
     if output_manifest is not None:
         with open(args.results_manifest, 'w') as ofp:
             for data in output_manifest:
-                ofp.write(f"{json.dumps(data)}\n")
+                ofp.write(f"{json.dumps(data,,ensure_ascii=False))}\n")
         with open(log_file, 'a') as f:
             f.write(s)
 
