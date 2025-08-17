@@ -54,7 +54,7 @@ def parse_arguments():
     parser = argparse.ArgumentParser()
     parser.add_argument('--log_level', type=str, default='warning')
     parser.add_argument('--engine_dir', type=str, default='canary')
-    parser.add_argument('--nemo_dir', type=str, default="/inference/examples/canary/canary_model/canary_in22_multilingual_tokenizer_iv_ft-averaged.nemo")
+    parser.add_argument('--nemo_dir', type=str, default="/inference/TensorRT-LLM/examples/canary/canary_model/canary_in22_multilingual_tokenizer_iv_ft-averaged.nemo")
     parser.add_argument('--results_dir', type=str, default='tmp')
     parser.add_argument('--assets_dir', type=str, default='./assets')
     parser.add_argument('--input_file', type=str, default=None)
@@ -1126,7 +1126,7 @@ if __name__ == '__main__':
     if output_manifest is not None:
         with open(args.results_manifest, 'w') as ofp:
             for data in output_manifest:
-                ofp.write(f"{json.dumps(data,,ensure_ascii=False))}\n")
+                ofp.write(f"{json.dumps(data,ensure_ascii=False)}\n")
         with open(log_file, 'a') as f:
             f.write(s)
 
